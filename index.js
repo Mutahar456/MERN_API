@@ -46,7 +46,7 @@ app.put('/api/items/:id', async (req, res) => {
 });
 
 // Delete an item by ID
-app.delete('/items/:id', async (req, res) => {
+app.delete('api/items/:id', async (req, res) => {
   try {
     await Item.findByIdAndDelete(req.params.id);
     res.json({ message: 'Item deleted' });
